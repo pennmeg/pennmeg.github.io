@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Base styles:
+   ========================================================================== */
+/* Fix to include padding and border in the total width for each element */
+* {
+  box-sizing: border-box;
+}
+
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: rgb(237, 193, 119);
+  letter-spacing: 5px;
+  font-size: 25px;
+}
+
+header {
+  background-color: rgb(32, 62, 103);
+  padding: 8px;
+}
+
+nav {
+  word-spacing: 25px;
+}
+nav a {
+  color: rgb(235, 235, 235);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: rgb(237, 193, 119);
+}
+
+.scrolled {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+
+.love, .marriage {
+  display: inline-block;
+} /* plan is to have image overlay on hover */
+
+.love-overlay, .marriage-overlay {
+  display: none;
+} /* plan is to have image overlay on hover */
