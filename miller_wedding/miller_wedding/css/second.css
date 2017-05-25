@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+/* header and nav */
+
+h1 {
+  text-transform: uppercase;
+  color: rgb(237, 193, 119);
+  letter-spacing: 5px;
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+header {
+  background-color: black;
+  padding: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+nav {
+  word-spacing: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+nav a {
+  color: rgb(235, 235, 235);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: rgb(219, 191, 230);
+}
+
+/* body */
+
+h2 {
+  font-family: 'Sacramento', cursive;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 8px;
+  color: black;
+}
+
+h2 a {
+  color: rgb(219, 191, 230);
+  text-decoration: none;
+}
+
+h3 {
+  font-family: 'Sacramento', cursive;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 5px;
+  color: black;
+}
+
+li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p a {
+  color: rgb(219, 191, 230);
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* slide show */
+
+/*.carousel-wrapper {
+  position: relative;
+}
+
+#left {
+  position: absolute;
+  top: 50%;
+}*/
+
+.buttons {
+  text-align: center;
+  color: rgb(219, 191, 230);
+  border: 0px solid white; /* why won't the grey go away?! */
+  padding: 10px;
+}
+
+.wrapper {
+	width: 50%;
+	max-width: 1000px;
+	margin: 0 auto 30px;
+	overflow: hidden;
+}
+
+.slides {
+	transition: all .3s ease-in-out;
+	display: flex;
+	width: 800%;
+}
+
+.photo {
+	align-self: center;
+  width: 12.5%;
+}
+
+/* love flex wrapper */
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+.columnOne {
+  width: 60%;
+}
+
+.columnTwo {
+  width: 38%;
+  background-color: rgb(235, 235, 235);
+  padding: 5px;
+  display: inline-block;
+  line-height: 5px;
+}
+
+.columnTwo p {
+  display: inline-block;
+  font-size: 14px;
+}
+
+/* love flex wrapper him and her */
+
+.him {
+  color: rgb(100, 149, 237);
+}
+
+.her {
+  color: rgb(219, 112, 147);
+}
+
+/* footer */
+
+footer {
+  /* get footer to bottom */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  background-color: rgb(235, 235, 235);
+  text-align: center;
+  padding: 5px;
+}

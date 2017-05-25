@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  text-align: center;
+}
+/* header and nav */
+
+header {
+  	background-image: url("../img/wedding_main.png");
+  	background-size: cover;
+  	display: flex;
+  	width: 100%;
+  	justify-content: center;
+  	min-height: 90vh;
+    background-position: center;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  color: rgb(237, 193, 119);
+  letter-spacing: 20px;
+  line-height: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+nav {
+  background-color: black;
+  padding: 10px;
+  word-spacing: 25px;
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+nav a {
+  color: rgb(235, 235, 235);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: rgb(219, 191, 230);
+}
+
+/* body */
+
+h3 {
+  font-family: 'Sacramento', cursive;
+  text-transform: lowercase;
+  font-size: 50px;
+  color: rgb(237, 193, 119);
+  line-height: 8px;
+  font-weight: normal;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px 75px 20px 75px;
+}
+
+p a {
+  color: rgb(219, 191, 230);
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+#intro {
+  text-align: justify;
+}
+
+footer {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  background-color: rgb(235, 235, 235);
+  padding: 5px;
+}
+
+.love,
+.marriage {
+	width: 300px;
+	height: 300px;
+  margin: 30px auto;
+	position: relative;
+	overflow: hidden;
+  display: inline-block;
+}
+
+.overlay {
+  width: 300px;
+	height: 300px;
+	background-color: rgba(219, 191, 230, .7);
+	position: absolute;
+	bottom: 0px;
+  left: 0px;
+	opacity: 0;
+  line-height: 267px;
+  font-size: 35px;
+  font-family: 'Sacramento', cursive;
+  font-weight: bold;
+  text-transform: lowercase;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.love:hover .overlay, .marriage:hover .overlay {
+	opacity: 1;
+}
+
+/* .scrolled {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+} */
