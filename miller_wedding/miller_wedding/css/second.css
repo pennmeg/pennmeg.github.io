@@ -74,6 +74,7 @@ li {
 
 p {
   font-family: 'Open Sans', sans-serif;
+  text-align: justify;
 }
 
 p a {
@@ -87,14 +88,21 @@ p a:hover {
 
 /* slide show */
 
-/*.carousel-wrapper {
+.carousel-wrapper {
   position: relative;
 }
 
 #left {
   position: absolute;
-  top: 50%;
-}*/
+  top: 40%;
+  left: 20.5%;
+}
+
+#right {
+  position: absolute;
+  top: 40%;
+  right: 20.5%;
+}
 
 .buttons {
   text-align: center;
@@ -126,7 +134,7 @@ p a:hover {
 .text {
   display: flex;
   justify-content: space-between;
-  margin: 50px;
+  margin: 0px 50px 50px 50px;
 }
 
 .columnOne {
@@ -156,6 +164,20 @@ p a:hover {
   color: rgb(219, 112, 147);
 }
 
+/* marriage main-body */
+
+.main-body {
+  margin: 20px 100px;
+}
+
+.leftphoto {
+  margin-right: 3px;
+}
+
+.rightphoto {
+  margin-left: 2px
+}
+
 /* footer */
 
 footer {
@@ -163,6 +185,9 @@ footer {
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
   background-color: rgb(235, 235, 235);
-  text-align: center;
   padding: 5px;
+}
+
+footer p {
+  text-align: center;
 }
