@@ -1,0 +1,234 @@
+/* general */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+/* header */
+
+header {
+  width: 100%;
+  background-color: #693D3D;
+  padding: 5px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  line-height: 25px;
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 20px;
+  line-height: 5px;
+  text-align: center;
+  color: white;
+}
+
+/* body */
+
+#overview, #resume {
+  background-color: #46211A;
+  width: 100%;
+  padding: 10px;
+  color: white;
+}
+
+#resume {
+  margin-top: 30px;
+}
+
+h3 {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 20px;
+}
+
+h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+}
+
+h5 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  line-height: 6px;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+#jobs p {
+  line-height: 6px;
+}
+
+li {
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#overview p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+#education {
+  padding: 0px 10px;
+}
+
+#visitlinkedin {
+  background-color: #eee;
+  padding: 5px;
+  text-align: right;
+}
+
+#visitlinkedin a {
+  text-decoration: none;
+  color: #BA5536;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+}
+
+#visitlinkedin a:hover {
+  text-decoration: underline;
+  color: #BA5536;
+}
+
+li {
+  list-style: circle;
+}
+/* links and footer */
+
+.fontawesome {
+  background-color: #BA5536;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.fontawesome a {
+  color: white;
+}
+
+.fontawesome a:hover {
+  color: #46211A;
+}
+
+footer p {
+  font-size: 12px;
+  text-align: center;
+}
+
+footer {
+  background-color: #eee;
+  padding: 3px;
+}
+
+/* wrapper */
+
+.educationwrapper {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.educationwrapper img {
+  height: 100px;
+  width: 100px;
+}
+
+#york, #gwu, #ga, #nycda {
+  width: 25%;
+  line-height: 8px;
+  height: 150px;
+}
+
+/* media text only */
+
+@media all and (max-width: 1090px) {
+.educationwrapper p {
+  font-size: 12px;
+}
+}
+
+/* media medium */
+
+@media all and (max-width: 940px) {
+  .educationwrapper {
+    flex-wrap: wrap;
+}
+
+.educationwrapper img {
+  height: 100px;
+  width: 100px;
+}
+  #york, #gwu, #ga, #nycda {
+    width: 50%;
+    line-height: 8px;
+    height: 200px;
+    flex-wrap: wrap;
+}
+}
+
+/* media small */
+
+@media all and (max-width: 560px) {
+  .educationwrapper {
+    flex-wrap: wrap;
+}
+
+.educationwrapper img {
+  height: 70px;
+  width: 70px;
+}
+  #york, #gwu, #ga, #nycda {
+    width: 100%;
+    line-height: 8px;
+    height: 150px;
+    flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 18px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 1;
+  margin-top: -10px;
+  margin-left: -8px;
+}
+
+#overview {
+  margin-top: 80px;
+}
+
+#jobs p {
+  line-height: 14px;
+}
+
+h5 {
+  line-height: 14px;
+}
+}
