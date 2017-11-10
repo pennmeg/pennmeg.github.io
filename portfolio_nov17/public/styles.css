@@ -1,0 +1,72 @@
+body {
+  width: 100%;
+}
+#nav {
+  margin: 0 auto;
+  background-color: white;
+}
+a {
+  color: #A57E94;
+}
+a:hover {
+  color: #8d637b;
+}
+.ui.basic.label {
+  border-color: #8d637b;
+  margin-top: 6px;
+}
+
+#siteName {
+  margin-top: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #8c637b;
+}
+#secondNav {
+  /*visibility: hidden;*/
+  /*opacity: 0;*/
+  display: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #A57E94;
+  font-size: 16px;
+  padding: 10px 7px;
+}
+#summary {
+  background-color: #e3d8df;
+  padding: 10px;
+  border-radius: .3125em;
+  text-align: justify;
+}
+hr {
+  border: 0.5px solid #d9c9d2;
+}
+footer {
+  text-align: center;
+  font-size: 11px;
+  padding: 6px;
+}
+.section {
+  padding: 0px 5px;
+  margin: 30px 20px;
+  min-height: 550px;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+#topButton {
+  visibility: hidden;
+  position: fixed; /* Fixed/sticky position */
+  bottom: 35px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  padding: 8px;
+}
+#topButton:hover {
+  background-color: #d9c9d2;
+}
+#topButton i {
+  margin: 0;
+}
