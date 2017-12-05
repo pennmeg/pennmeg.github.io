@@ -18,9 +18,7 @@ window.onload = function(e) { //makes sure window is loaded
     activateButtons: function(){
       console.log("==activateButtons==");
       $('#startGame').on('click', game.checkUser);
-      $('#spin').on('click', game.spinWheel);
       $('#loadPuzzle').on('click', game.loadPuzzle);
-      $('#endGame').on('click', game.endGame);
     },
     checkUser: function(){
       console.log("--checkUser--");
@@ -68,9 +66,7 @@ window.onload = function(e) { //makes sure window is loaded
         }
       };
       $('#enterLetter').val("");
-      $('#guessLetter').on('click', game.checkLetter);
-      $('#vowel').on('click', game.buyVowel);
-      $('#solve').on('click', game.solvePuzzle);
+      $('#spin').on('click', game.spinWheel);
     },
     spinWheel: function(){
       console.log("--spinWheel--");
@@ -83,6 +79,10 @@ window.onload = function(e) { //makes sure window is loaded
       } else {
         $('#currentWheel').text("$" + game.currentValue);
       };
+      $('#endGame').on('click', game.endGame);
+      $('#guessLetter').on('click', game.checkLetter);
+      $('#vowel').on('click', game.buyVowel);
+      $('#solve').on('click', game.solvePuzzle);
     },
     checkLetter: function(){
       console.log("--checkLetter--");
@@ -134,32 +134,47 @@ window.onload = function(e) { //makes sure window is loaded
     buyVowel: function(){
       console.log("--buyVowel--");
       var guessedVowel = $('#enterLetter').val();
-      var vowels = ["a", "e", "i", "o", "u"];
+      var vowels = "aeiou";
       if (game.currentPlayer == 0){
         if (game.playerArray[0].roundScore > 250) {
           alert("Please enter a vowel and click guess letter.");
-          var newScoreOne = game.playerArray[0].roundScore - 250;
-          game.playerArray[0].roundScore = newScoreOne;
-          $('#roundScore_1').text(newScoreOne);
-          console.log("newScore", newScoreOne);
+          var correctValue = vowels.indexOf(guessedVowel);
+          if (correctValue == -1) {
+            alert("Please guest a vowel")
+          } else {
+            var newScoreOne = game.playerArray[0].roundScore - 250;
+            game.playerArray[0].roundScore = newScoreOne;
+            $('#roundScore_1').text(newScoreOne);
+            console.log("newScore", newScoreOne);
+          }
         } else {
           alert("You do not have enough money to buy a vowel, please enter a consonant.")
         }
       } else if (game.currentPlayer == 1) {
         if (game.playerArray[1].roundScore > 250) {
           alert("Please enter a vowel and click guess letter.");
-          var newScoreTwo = game.playerArray[1].roundScore - 250;
-          game.playerArray[1].roundScore = newScoreTwo;
-          $('#roundScore_2').text(newScoreTwo);
+          var correctValue = vowels.indexOf(guessedVowel);
+          if (correctValue == -1) {
+            alert("Please guest a vowel")
+          } else {
+            var newScoreTwo = game.playerArray[1].roundScore - 250;
+            game.playerArray[1].roundScore = newScoreTwo;
+            $('#roundScore_2').text(newScoreTwo);
+          }
         } else {
           alert("You do not have enough money to buy a vowel, please enter a consonant.")
         }
       } else {
         if (game.playerArray[2].roundScore > 250) {
           alert("Please enter a vowel and click guess letter.");
-          var newScoreThree = game.playerArray[2].roundScore - 250;
-          game.playerArray[2].roundScore = newScoreThree;
-          $('#roundScore_3').text(newScoreThree);
+          var correctValue = vowels.indexOf(guessedVowel);
+          if (correctValue == -1) {
+            alert("Please guest a vowel")
+          } else {
+            var newScoreThree = game.playerArray[2].roundScore - 250;
+            game.playerArray[2].roundScore = newScoreThree;
+            $('#roundScore_3').text(newScoreThree);
+          }
         } else {
           alert("You do not have enough money to buy a vowel, please enter a consonant.")
         }
@@ -168,16 +183,19 @@ window.onload = function(e) { //makes sure window is loaded
     highlightPlayer: function(){
       console.log("==highlightPlayer==");
       if (game.currentPlayer == 0){
+        alert("Please spin the wheel!");
         $('#player_1').css("color", "#FB6542");
       } else {
         $('#player_1').css("color", "#000");
       };
       if (game.currentPlayer == 1){
+        alert("Please spin the wheel!");
         $('#player_2').css("color", "#FB6542");
       } else {
         $('#player_2').css("color", "#000");
       };
       if (game.currentPlayer == 2){
+        alert("Please spin the wheel!");
         $('#player_3').css("color", "#FB6542");
       } else {
         $('#player_3').css("color", "#000");
@@ -187,12 +205,24 @@ window.onload = function(e) { //makes sure window is loaded
       console.log("==bankrupt==");
       if (game.currentPlayer == 0){
         $('#roundScore_1').text(0);
+        game.currentPlayer = game.currentPlayer+1;
+        if (game.currentPlayer == game.playerArray.length) {
+          game.currentPlayer = 0;
+        };
       };
       if (game.currentPlayer == 1){
         $('#roundScore_2').text(0);
+        game.currentPlayer = game.currentPlayer+1;
+        if (game.currentPlayer == game.playerArray.length) {
+          game.currentPlayer = 0;
+        };
       };
       if (game.currentPlayer == 2){
         $('#roundScore_3').text(0);
+        game.currentPlayer = game.currentPlayer+1;
+        if (game.currentPlayer == game.playerArray.length) {
+          game.currentPlayer = 0;
+        };
       };
     },
     solvePuzzle: function(){
