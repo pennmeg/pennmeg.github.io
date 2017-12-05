@@ -32,6 +32,9 @@ a:hover {
   font-size: 16px;
   padding: 10px 7px;
 }
+h2 {
+  text-align: center;
+}
 #summary {
   background-color: #e3d8df;
   padding: 10px;
