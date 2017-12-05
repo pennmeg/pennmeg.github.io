@@ -1,0 +1,71 @@
+<!doctype html>
+	<html lang="en-us">
+		<head>
+			<meta charset="utf-8">
+			<title>Wheel of Fortune_MP</title>
+			<link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+			<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+			<link rel="stylesheet" href="style.css">
+		</head>
+		<body>
+			<h1>Wheel of Fortune</h1>
+			<div id="scoreBoard">
+				<table>
+				  <tr>
+				    <th>Player Name</th>
+				    <th>Round Score ($)</th>
+				    <th>Total Score ($)</th>
+				  </tr>
+				  <tr>
+				    <td id="player_1">Player 1</td>
+				    <td id="roundScore_1">0</td>
+				    <td id="totalScore_1">0</td>
+				  </tr>
+				  <tr>
+				    <td id="player_2">Player 2</td>
+				    <td id="roundScore_2">0</td>
+				    <td id="totalScore_2">0</td>
+				  </tr>
+					<tr>
+						<td id="player_3">Player 3</td>
+						<td id="roundScore_3">0</td>
+						<td id="totalScore_3">0</td>
+					</tr>
+				</table>
+			</div>
+			<div id="buttonGroup">
+				<button id="spin" class="buttons">Spin Wheel</button>
+				<button id="loadPuzzle" class="buttons">Load Puzzle</button>
+				<input type="text" id="enterLetter" placeholder="Enter Letter or Phrase">
+				<button id="vowel" class="buttons">Buy Vowel</button>
+				<button id="guessLetter" class="buttons">Guess Letter</button>
+				<button id="solve" class="buttons">Solve Puzzle</button>
+				<button id="endGame" class="buttons">End Game</button>
+			</div>
+			<div id="display">
+				<div id="wheel">
+					<p id="currentWheel">Bankrupt!</p>
+				</div>
+				<div id="gameDisplay">
+				</div>
+			</div>
+			<!-- Modal start -->
+			<div id="startModal">
+		  <!-- Modal content -->
+			  <div id="modalContent">
+			    <p>Enter Your Name to Play</p>
+					<h2>Wheel of Fortune!</h2>
+					<label for="userName_1">Player 1:</label>
+					<input type="text" id="userName_1" value="Megan">
+					<label for="userName_2">Player 2:</label>
+					<input type="text" id="userName_2">
+					<label for="userName_3">Player 3:</label>
+					<input type="text" id="userName_3"><br>
+					<button type="button" id="startGame">Start Game</button>
+			  </div>
+			</div>
+			<!-- Modal end -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="script.js"></script>
+		</body>
+	</html>
