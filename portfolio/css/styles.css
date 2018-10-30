@@ -138,7 +138,7 @@ img {
 }
 .ui.basic.label {
   width: 100%;
-  margin-top: 0.4em;
+  font-weight: 600;
   color: #3E5063;
 }
 .description p {
