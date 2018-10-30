@@ -137,8 +137,8 @@ img {
   margin: 0 !important;
 }
 .ui.basic.label {
+  width: 100%;
   margin-top: 0.4em;
-  border-color: #BDA8FF;
   color: #3E5063;
 }
 .description p {
