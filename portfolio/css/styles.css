@@ -109,10 +109,6 @@ img {
 .section__home--summary .section__subtitle {
   text-transform: uppercase;
 }
-.section__home--portfolio img {
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-}
 .section__home--portfolio .section__title,
 .section__publications .section__title,
 .section__web--portfolio .section__title {
