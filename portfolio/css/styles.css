@@ -48,6 +48,9 @@ img {
   justify-content: center;
   text-align: center;
 }
+#nav__options span {
+  color: #BDA8FF;
+}
 /* Section General Styling / Font */
 .section__title {
   font-size: 1.5em;
@@ -64,6 +67,9 @@ img {
   font-size: 1.3em;
 }
 /* Mobile Displays */
+.subsection_skills--desktop p {
+  letter-spacing: 0.65px;
+}
 .subsection_skills--mobile {
   display: none;
 }
@@ -154,6 +160,8 @@ img {
 .ui.text.menu .item,
 .link--content__nav {
   margin: .35714286em .85em;
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }
 .link--content,
 .ui.text.menu .item,
@@ -162,13 +170,7 @@ img {
   font-weight: 500;
   color: #3E5063;
 }
-.link--content,
-.ui.text.menu .item,
-.ui.menu a.item,
-.ui.text.menu .item:hover,
-.ui.menu a.item:hover,
-.ui.text.menu .item:focus,
-.ui.menu a.item:focus {
+.link--content {
   background:
    linear-gradient(
      to bottom, #FF7E84 0%,
@@ -191,7 +193,7 @@ img {
 .ui.menu a.item:hover,
 .ui.text.menu .item:focus,
 .ui.menu a.item:focus {
-  color: #FF7E84;
+  color: #262223;
 }
 /* Navigate to Top Button */
 #topButton {
