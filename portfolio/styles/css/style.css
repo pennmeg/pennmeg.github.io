@@ -320,9 +320,12 @@ nav {
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: .35em .25em;
-  transition: background-size .2s; }
+  transition: background-size .2s;
+  color: white; }
   .contact__form input:hover, .contact__form textarea:hover {
     background-size: .23em .35em; }
+  .contact__form input:focus, .contact__form textarea:focus {
+    color: #030303; }
 
 .contact__form {
   display: flex;

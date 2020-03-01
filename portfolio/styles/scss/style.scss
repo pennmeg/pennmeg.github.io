@@ -442,9 +442,14 @@ nav {
   background-repeat: repeat-x;
   background-size: .35em .25em;
   transition: background-size .2s;
+  color: white;
 
   &:hover {
     background-size: .23em .35em;
+  }
+
+  &:focus {
+    color: $offBlack;
   }
 }
 
