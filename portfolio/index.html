@@ -1,167 +1,118 @@
 <!doctype html>
 <html lang="en">
 	<head>
-    <title>Megan Penn | Web Developer</title>
+    <title>Megan Penn | Front End Developer</title>
  		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/css/style.css">
+    <script src="https://kit.fontawesome.com/55809e9e97.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-    <header class="ui text fixed menu" id="nav">
-			<h1 id="site--header">Megan Penn</h1>
-			<div id="nav__options">
-        <a class="item link--content__nav" href="index.html">Home</a>
-				<span>&bull;</span>
-      	<a class="item link--content__nav" href="about.html">About Me</a>
-				<span>&bull;</span>
-      	<a class="item link--content__nav" href="web_portfolio.html">Web Applications</a>
+    <section role="header" id="main">
+      <div id="header--grid" class="container">
+        <div class="line--top" role="none"></div>
+        <div class="square--left" role="none"></div>
+        <div class="container container--header">
+          <h1 class="header__site">Megan Penn</h1>
+          <p class="bold">Front End Developer</p>
+          <hr role="none">
+          <p class="section__summary">Developer &amp; cyber security analyst, passionate about technology &amp; responsive accessible web applications, enjoy being able to think creatively &amp; critically, addicted to a good face mask, and I stay organized with a good ol' pen &amp; Filofax.</p>
+					<nav>
+						<a class="link--nav" href="#about"><i role="img" alt="" class="fas fa-female"></i> <span>About</span></a>
+						<a class="link--nav" href="#work"><i role="img" alt="" class="fas fa-laptop-code"></i> <span>Work</span></a>
+						<a class="link--nav" href="#contact"><i role="img" alt="" class="fas fa-phone"></i> <span>Contact</span></a>
+					</nav>
+        </div>
+        <div class="square--right" role="none"></div>
+        <div class="line--bottom" role="none"></div>
+      </div>
+    </section>
+    <section id="about">
+			<h2 class="header__section smallOnly">About</h2>
+			<img alt="" src="assets/images/profilePhoto.jpg"/>
+			<div class="text--wrapper">
+				<h2 class="header__section largeOnly">About</h2>
+				<p class="section__summary">I'm a full stack developer specializing in front-end development with a background in international security and education.
+	          I have a passion for technology and social impact, and work to expand technology education, awareness, and accessiblity.
+	          A product of web development bootcamps, I have a knack for catching on quickly, working
+	          hard, being a part of fast-paced environments, and have a passion and interest for continued learning.</p>
+				<h3 class="header__subsection">Skills & Proficiencies</h3>
+	      <p>React, Styled-Components, SCSS/CSS (+ Material UI, Semantic UI, Bootstrap), JavaScript, Node+TypeScript, SQL Databses, HTML/HTML5, Ruby/Ruby on Rails, Git, GitHub/GitLab, HubSpot/HubL, Responsive Web Development, Web Accessibility, Agile Development, Education & Training, French</p>
+				<a class="link__download" href="assets/documents/PennMegan-Resume2020.pdf" target="_blank" download>
+					<i role="img" alt="" class="far fa-file-alt"></i>
+					<p class="link__small">Download My</p>
+					<p class="link__large">Resume</p>
+				</a>
+				<a class="link__download" href="https://github.com/pennmeg">
+					<i role="img" alt="" class="fab fa-github"></i>
+					<p class="link__small">Visit My</p>
+					<p class="link__large">GitHub</p>
+				</a>
 			</div>
-    </header>
-		<div class="main--content">
-			<div class="section section__hero hero__home--photo">
-				<div class="container--gutters">
-					<div class="sub__section section__home--summary">
-						<p>Web developer &amp; cyber security analyst, passionate about technology &amp; responsive accessible CSS, enjoy being able to think
-							creatively &amp; critically, addicted to a good face mask, and
-							I stay organized with a good ol' pen &amp; Filofax.</p>
-						<h2 class="section__subtitle title--background">Interested in Working Together?</h2>
-						<p>Let's connect &amp; say hello!</p>
-						<div class="ui list">
-							<div class="item">
-								<i class="marker icon icon--static"></i>
-								<div class="content">Washington DC</div>
-							</div>
-							<div class="item">
-								<i class="mail icon icon--static"></i>
-								<div class="content">
-									<a href="mailto:penn.meg@gmail.com" class="link--content">Email</a>
-								</div>
-							</div>
-							<div class="item">
-								<i class="linkedin square icon icon--static"></i>
-								<div class="content">
-									<a href="https://www.linkedin.com/in/meganpenn" class="link--content">Linkedin.com/meganpenn</a>
-								</div>
-							</div>
-							<div class="item">
-								<i class="github square icon icon--static"></i>
-								<div class="content">
-									<a href="https://github.com/pennmeg" class="link--content">Github.com/pennmeg</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section section__home--portfolio">
-				<div class="container--gutters">
-					<h2 class="section__title">Web Applications</h2>
-		      <div class="ui three stackable cards">
-						<a class="ui card" href="https://github.com/pennmeg/ng5">
-							<div class="image">
-								<img src="css/images/angular-bucket--list.png" alt="Create a Bucket List">
-							</div>
-							<div class="content">
-								<h3 class="header section__subtitle">Bucket List</h3>
-								<div class="description">
-									<p class="override-margin">Nov. 2018</p>
-									<p>Bucket list application using Angular5. Followed Udemy course on introduction to Angular as project base.</p>
-								</div>
-							</div>
-						</a>
-						<a class="ui card" href="https://github.com/pennmeg/pure_css_desk-flatlay">
-							<div class="image">
-								<img src="css/images/pure_css_desk-flatlay--square.png" alt="Desk flatlay using Pure CSS">
-							</div>
-							<div class="content">
-								<h3 class="header section__subtitle">Pure CSS Images</h3>
-								<div class="description">
-									<p class="override-margin">Oct. 2018</p>
-									<p>Self-challenge beginning May 5, 2018 to create images using CSS. Click to see full list of images.</p>
-								</div>
-							</div>
-						</a>
-						<a class="ui card"  href="https://github.com/pennmeg/women-stem-mp">
-							<div class="image">
-		        		<img src="css/images/womenStem.jpg" alt="Women in STEM">
-		      		</div>
-							<div class="content">
-								<h3 class="header section__subtitle">Women in STEM</h3>
-								<div class="description">
-									<p class="override-margin">Dec. 2017</p>
-									<p>Interactive parallax website to help educate students on international policies surrounding Women in STEM.</p>
-								</div>
-							</div>	
-						</a>
-						<!-- <a class="ui card" href="https://github.com/pennmeg/MP_wheelOfFortune">
-							<div class="image">
-		        		<img src="css/images/wheelOfFortune.jpg" alt="Wheel of Fortune">
-		      		</div>
-		          <div class="content">
-		            <h3 class="header section__subtitle">Wheel of Fortune</h3>
-		            <div class="description">
-		              <p class="override-margin">Sep. 2017</p>
-		              <p>Spin the wheel and guess the phrase! Recreated an online version of Wheel of Fortune using jQuery and JavaScript. </p>
-								</div>
-		          </div>
-		        </a> -->
-		      </div>
-				</div>
-			</div>
-			<div class="section section__publications">
-				<div class="container--gutters">
-					<h2 class="section__title">Recent Publications</h2>
-					<div class="ui two stackable cards">
-						<a class="ui card pubs" href="https://liferaftinc.com/blog/2018/11/20/among-tech-giants-consumer-trust-and-privacy/" target="_blank">
-							<div class="content">
-								<h3 class="header section__subtitle">Among Tech Giants: Consumer Trust and Privacy</h3>
-								<div class="description">
-									<p class="publication--source override-margin">LifeRaft Inc.</p>
-									<p>Published: Nov. 20, 2018</p>
-								</div>
-							</div>
-						</a>
-						<a class="ui card pubs" href="https://liferaftinc.com/blog/2018/10/19/online-crimes-are-not-new-theyve-just-evolved/" target="_blank">
-							<div class="content">
-								<h3 class="header section__subtitle">Online Crimes Are Not New, They’ve Just Evolved</h3>
-								<div class="description">
-									<p class="publication--source override-margin">LifeRaft Inc.</p>
-									<p>Published: Oct. 19, 2018</p>
-								</div>
-							</div>
-						</a>
-						<a class="ui card pubs" href="http://www.observatorymedia.org/caves-couriers-terrorists-communications-going-dark/" target="_blank">
-							<div class="content">
-								<h3 class="header section__subtitle">Caves &amp; Couriers: Terrorists' Communications Going Dark</h3>
-								<div class="description">
-									<p class="publication--source override-margin">Observatory Media</p>
-									<p>Published: Jun. 16, 2016</p>
-								</div>
-							</div>
-						</a>
-						<a class="ui card pubs" href="http://thesimonscenter.org/iap-17w-november-2015/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B1yI5R1k6SB6oxDloQtexUQ%3D%3D" target="_blank">
-							<div class="content">
-								<h3 class="header section__subtitle">Countering Cyber Extremism</h3>
-								<div class="description">
-									<p class="publication--source override-margin">Interagency Papers</p>
-									<p class="override-margin">Co-authored by: Joshua K. Miller and Jan Schwarzenberg</p>
-									<p>Published: Nov. 3, 2015</p>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<button class="ui button" id="topButton">
-			<i class="angle double up icon"></i>
-		</button>
-    <footer id="footer">
-			<p>&copy; 2018 Megan Penn</p>
-    </footer>
+		</section>
+    <section id="work">
+      <h2 class="header__section">Work</h2>
+      <div class="work--grid">
+        <a class="card webApp" id="bucketList" href="https://github.com/pennmeg/ng5">
+          <h3 class="header__subsection">Bucket List</h3>
+					<!-- <img src="assets/images/angular-bucket--list.png" alt="" /> -->
+          <p>Bucket list application using Angular5. Followed Udemy course on introduction to Angular as project base.</p>
+        </a>
+				<a class="card card__publication" href="https://liferaftinc.com/blog/2018/11/20/among-tech-giants-consumer-trust-and-privacy/">
+					<h3 class="header__subsection">Among Tech Giants: Consumer Trust and Privacy</h3>
+					<p>Nov. 20, 2018 | LifeRaft Inc.</p>
+				</a>
+				<a class="card card__webApp" id="pureCss" href="https://github.com/pennmeg/pure_css_desk-flatlay">
+					<h3 class="header__subsection">Pure CSS Images</h3>
+					<!-- <img src="assets/images/pure_css_desk-flatlay--square.png" alt="" /> -->
+					<p>Self-challenge beginning May 5, 2018 to create images using CSS. Click to see full list of images.</p>
+				</a>
+				<a class="card card__publication" href="https://liferaftinc.com/blog/2018/10/19/online-crimes-are-not-new-theyve-just-evolved/">
+					<h3 class="header__subsection">Online Crimes Are Not New, They’ve Just Evolved</h3>
+					<p>Oct. 19, 2018 | LifeRaft Inc.</p>
+				</a>
+        <a class="card card__webApp" id="womenStem" href="https://github.com/pennmeg/women-stem-mp">
+          <h3 class="header__subsection">Women in STEM</h3>
+					<!-- <img src="assets/images/womenStem.jpg" alt="" /> -->
+          <p>Interactive parallax website to help educate students on international policies surrounding Women in STEM.</p>
+        </a>
+        <a class="card card__webApp" id="wheelOfFortune" href="https://github.com/pennmeg/MP_wheelOfFortune">
+          <h3 class="header__subsection">Wheel of Fortune</h3>
+					<!-- <img src="assets/images/wheelOfFortune.jpg" alt="" /> -->
+          <p>Spin the wheel and guess the phrase! Recreated an online version of Wheel of Fortune using jQuery and JavaScript. </p>
+        </a>
+        <a class="card card__publication" href="http://thesimonscenter.org/iap-17w-november-2015/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B1yI5R1k6SB6oxDloQtexUQ%3D%3D">
+          <h3 class="header__subsection">Countering Cyber Extremism</h3>
+          <p>Nov. 3, 2015 | Interagency Papers</p>
+        </a>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container--contact">
+        <h2 class="header__section">Contact</h2>
+        <p class="section__summary">Let's connect &amp; say hello!</p>
+        <div class="contact__information">
+          <ul class="contact__links">
+            <li><i role="img" alt="Location" class="fas fa-globe-americas"></i>Washington DC</li>
+            <li><i role="img" alt="LinkedIn" class="fab fa-linkedin"></i><a class="link" href="https://www.linkedin.com/in/meganpenn">Linkedin.com/meganpenn</a></li>
+            <li><i role="img" alt="GitHub" class="fab fa-github-square"></i><a class="link" href="https://github.com/pennmeg">Github.com/pennmeg</a></li>
+          </ul>
+          <form class="contact__form" action="https://formspree.io/mayjwdvd" method="POST">
+            <label for="name">Name *</label>
+            <input required id="name" type="text" name="name">
+            <label for="email">Email *</label>
+            <input required id="email" type="email" name="_replyto">
+            <label for="message">Your Message Here *</label>
+            <textarea required id="message" name="message"></textarea>
+            <button type="submit" value="Send">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+		<footer><p>Photos by Daniel Fazio and Quino Al on Unsplash</p><p>&copy; 2020 Megan Penn</p></footer>
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="script/scripts.js"></script>
 	</body>

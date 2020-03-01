@@ -1,0 +1,513 @@
+/* Vars */
+$offBlack: #030303;
+$lighestGrey: #E5E5E5;
+$whiteBorder: 1px solid white;
+$fontBody: 'Poppins', sans-serif;
+$fontHeader: 'Playfair Display', serif;
+
+/* Media */
+$extraLarge: 1200px;
+$large: 992px;
+$medium: 768px;
+$small: 600px;
+$extraSmall: 450px;
+
+/* Global */
+body {
+  background-color: $offBlack;
+  font-family: $fontBody;
+  font-size: 1em;
+}
+
+button {
+  font-family: $fontBody;
+}
+
+%headers {
+  font-family: $fontHeader;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header__site {
+  @extend %headers;
+  font-size: 2.25em;
+
+  @media screen and (max-width: $small) {
+    font-size: 1.75em;
+  }
+}
+
+.header__section {
+  @extend %headers;
+  font-size: 2em;
+
+  @media screen and (max-width: $small) {
+    font-size: 1.25em;
+  }
+}
+
+.header__subsection {
+  font-family: $fontBody;
+  font-size: 1.45em;
+
+  @media screen and (max-width: $small) {
+    font-size: 1.15em;
+  }
+}
+
+.section__summary {
+  font-size: 1.15em;
+
+  @media screen and (max-width: $small) {
+    font-size: 1em;
+  }
+}
+
+/* Cover Photos */
+%backgroundPhoto {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+/* --- Main Section --- */
+#main {
+  @extend %backgroundPhoto;
+  height: 100vh;
+  background-image: url("../../assets/images/daniel-fazio-DzqeB43HfnE-unsplash.jpg");
+  padding: 3em 0;
+}
+
+.container--header {
+  box-sizing: border-box;
+  padding: 3em;
+  grid-column: 2;
+  grid-row: 3;
+  background-color: $offBlack;
+  text-align: center;
+  border-left: $whiteBorder;
+  border-right: $whiteBorder;
+
+  @media screen and (max-width: $small) {
+    padding: 1.5em;
+  }
+}
+
+.border {
+  height: calc(100vh - 4em);
+  border: $whiteBorder;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  justify-content: center;
+  grid-column: 2;
+  grid-row: 1;
+
+  @media screen and (max-width: $small) {
+    display: none;
+  }
+}
+
+.link--nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 8px 4px 4px;
+  transition: width 500ms ease-in-out;
+  color: white;
+  overflow: hidden;
+
+  span {
+    display: none;
+    margin-left: 4px;
+  }
+
+  &:hover,
+  &:focus {
+    width: 80px;
+    color: white;
+
+    span {
+      display: inline;
+    }
+  }
+}
+
+/* Grid Styling */
+#header--grid {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 1fr 1fr 350px 1fr 1fr;
+  grid-template-columns: 3em auto 3em;
+}
+
+%headerGridSquare {
+  background-color: $offBlack;
+  grid-row: 3;
+}
+
+.square--right {
+  @extend %headerGridSquare;
+  grid-column: 1;
+}
+
+.square--left {
+  @extend %headerGridSquare;
+  grid-column: 3;
+}
+
+%headerGridBorder {
+  grid-column: 2;
+  border-left: $whiteBorder;
+  border-right: $whiteBorder;
+}
+
+.line--top {
+  @extend %headerGridBorder;
+  grid-row: 1 / span 2;
+  border-top: $whiteBorder;
+}
+
+.line--bottom {
+  @extend %headerGridBorder;
+  grid-row: 4 / span 2;
+  border-bottom: $whiteBorder;
+}
+
+/* --- About --- */
+#about {
+  padding: 7em;
+  display: flex;
+  background-color: white;
+  text-align: center;
+
+  @media screen and (max-width: $medium) {
+    padding: 4em;
+    flex-wrap: wrap;
+  }
+
+  .smallOnly {
+    display: none;
+
+    @media screen and (max-width: $medium) {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  .largeOnly {
+    @media screen and (max-width: $medium) {
+      display: none;
+    }
+  }
+
+  img {
+    max-height: 300px;
+    max-width: 300px;
+    border: 3px double $offBlack;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    @media screen and (max-width: $medium) {
+      max-height: 200px;
+      max-width: 200px;
+      margin: auto;
+    }
+  }
+}
+
+.text--wrapper {
+  margin: 0 2em;
+
+  @media screen and (max-width: $medium) {
+    margin: 2em 0 0;
+  }
+}
+
+.link__download {
+  display: inline-block;
+  margin: 1em 2em;
+  color: $offBlack;
+  font-size: 2em;
+  background-color: transparent;
+  background: linear-gradient( to bottom, $offBlack 0%, $offBlack 100% );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: .35em .10em;
+  transition: background-size .2s;
+
+  @media screen and (max-width: $small) {
+    font-size: 1.25em;
+  }
+
+  &:hover,
+  &:focus {
+    color: $offBlack;
+    background-size: .23em .25em;
+  }
+
+  p {
+    margin: 0;
+
+    &.link__small {
+      font-size: .5em;
+
+      @media screen and (max-width: $small) {
+        font-size: 0.65em;
+      }
+    }
+
+    &.link__large {
+      line-height: 1em;
+    }
+  }
+}
+
+/* --- Work --- */
+#work {
+  padding: 3em 5em;
+  background-color: $lighestGrey;
+  text-align: center;
+
+  @media screen and (max-width: $small) {
+    padding: 1em 1.5em;
+  }
+}
+
+.work--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-column-gap: 10px;
+  row-gap: 15px;
+
+  @media screen and (max-width: $small) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.card {
+  position: relative;
+  min-height: 100px;
+  background-color: lightgray;
+
+  .header__subsection {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    height: 1.5em;
+    width: calc(100% - 10px);
+    color: $offBlack;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 1;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    filter: grayscale(100%);
+  }
+
+  p {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    padding: 15px 0 2px 15px;
+    font-size: 0.95em;
+    text-align: left;
+    opacity: 0;
+    color: $offBlack;
+    background: repeating-linear-gradient(-45deg,
+    $lighestGrey /* Need this, repeating gradient won't work */,
+    $lighestGrey 2px,
+    lightgray 0,
+    lightgray 9px /* Need this, tells where gradient repetition starts */);
+    transition: opacity 200ms ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    color: $offBlack;
+
+    p {
+      opacity: 1;
+    }
+  }
+}
+
+
+/* --- Contact --- */
+#contact {
+  @extend %backgroundPhoto;
+  background-image: url("../../assets/images/quino-al-8gWEAAXJjtI-unsplash.jpg");
+  padding: 3em;
+
+  @media screen and (max-width: $small) {
+    padding: 2em;
+  }
+
+  @media screen and (max-width: $extraSmall) {
+    padding: 1em;
+  }
+}
+
+.container--contact {
+  padding: 8em 3em;
+  height: 100%;
+  border: $whiteBorder;
+  text-align: center;
+
+  @media screen and (max-width: $small) {
+    padding: 4em 2em;
+  }
+
+  @media screen and (max-width: $extraSmall) {
+    padding: 1em;
+  }
+}
+
+.contact__information {
+  display: flex;
+  justify-content: center;
+  margin: 2em 4em;
+  text-align: left;
+
+  @media screen and (max-width: $medium) {
+    flex-wrap: wrap;
+    margin: 1em 2em;
+  }
+
+  @media screen and (max-width: $small) {
+    margin: 0;
+  }
+}
+
+.contact__links {
+  padding: 0;
+  margin: 0;
+  width: 300px;
+  list-style-type: none;
+
+  @media screen and (max-width: $medium) {
+    width: 100%;
+  }
+
+  li {
+    @media screen and (max-width: $small) {
+      margin: 0.5em;
+    }
+  }
+
+  i {
+    margin-right: 4px;
+  }
+
+  .link {
+    text-decoration: none;
+    background: linear-gradient( to bottom, #fff 0%, #fff 100% );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: .35em .25em;
+    transition: background-size .2s, color .2s;
+    color: white;
+
+    &:hover {
+      background-size: .23em 1.25em;
+      color: $offBlack;
+    }
+
+    &:focus {
+      background-size: .23em 1.25em;
+      color: $offBlack;
+    }
+  }
+}
+
+%form-inputs {
+  border: none;
+  background-color: transparent;
+  background: linear-gradient( to bottom, #fff 0%, #fff 100% );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: .35em .25em;
+  transition: background-size .2s;
+
+  &:hover {
+    background-size: .23em .35em;
+  }
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  @media screen and (max-width: $medium) {
+    margin-top: 1em;
+    width: 100%;
+  }
+
+  input {
+    @extend %form-inputs;
+
+    &:focus {
+      background-size: .23em 1.25em;
+    }
+  }
+
+  textarea {
+    @extend %form-inputs;
+    resize: none;
+
+    &:focus {
+      background-size: .23em 3.05em;
+    }
+  }
+
+  label:nth-child(n+2) {
+    margin-top: 10px;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 4px 8px;
+    background-color: white;
+    border: none;
+    color: black;
+    transition: color .2s, background-color .2s;
+
+    &:hover,
+    &:focus {
+      margin-top: 10px;
+      padding: 4px 8px;
+      background-color: $offBlack;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+/* --- Footer --- */
+footer {
+  padding: 0.5em;
+  background-color: $offBlack;
+  color: white;
+  text-align: center;
+  font-size: 0.75em;
+
+  p {
+    margin: 0;
+  }
+}
